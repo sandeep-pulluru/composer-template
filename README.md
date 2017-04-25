@@ -1,0 +1,2 @@
+# composer-template
+Composer Template
