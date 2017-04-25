@@ -1,0 +1,45 @@
+{
+    "name": "example-network",
+    "version": "1.0.0",
+    "description": "The repository for the Fabric Composer Template application",
+    "scripts": {
+        "preinstall": "composer --version || { echo 'Please first run npm install -g composer-cli' ; exit 1;} ",
+        "startHLF": "scripts/start-hyperledger.sh",
+        "stopHLF": "scripts/stop-hyperledger.sh",
+        "teardownHLF": "scripts/teardown.sh",
+        "postinstall": "scripts/download-hyperledger.sh && scripts/createProfile.sh && npm run startHLF"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:fabric-composer/composer-template"
+    },
+    "keywords": [
+        "Blockchain",
+        "Solutions",
+        "Framework",
+        "getting-started",
+        "Fabric Composer"
+    ],
+    "author": "Sandeep Pulluru",
+    "license": "ISC",
+    "dependencies": {
+        "cli-table": "^0.3.1",
+        "composer-admin": "^0.5.10",
+        "composer-client": "^0.5.10",
+        "config": "^1.24.0",
+        "jsonfile": "^2.4.0",
+        "lodash": "^4.17.4",
+        "sprintf-js": "^1.0.3",
+        "winston": "^2.3.0",
+        "yargs": "^6.5.0"
+    },
+    "devDependencies": {
+        "chai": "^3.5.0",
+        "chai-as-promised": "^6.0.0",
+        "chai-things": "^0.2.0",
+        "composer-connector-embedded": "^0.5.0",
+        "mocha": "^3.2.0",
+        "sinon": "^1.17.6",
+        "sinon-as-promised": "^4.0.2"
+    }
+}

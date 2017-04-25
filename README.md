@@ -1,2 +1,2 @@
-# composer-template
-Composer Template
+# example-fc
+Example Fabric Composer
